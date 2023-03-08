@@ -31,23 +31,23 @@ class DetailScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Column(
-                    children: const <Widget> [
+                    children: <Widget> [
                       Icon(Icons.calendar_today),
                       SizedBox(height: 8.0),
-                      Text('Open Everyday'),
+                      Text(place.day),
                     ],
                   ),
                   Column(
-                    children: const <Widget> [
+                    children: <Widget> [
                       Icon(Icons.access_time),
                       SizedBox(height: 8.0),
-                      Text('08.00 - 16.00'),
+                      Text(place.time),
                     ],
                   ),
                   Column(
-                    children: const <Widget> [
-                      Icon(Icons.monetization_on),
-                      Text('Rp 5.000'),
+                    children: <Widget> [
+                      Icon(Icons.attach_money),
+                      Text(place.ticket),
                     ],
                   ),
                 ],
@@ -55,14 +55,8 @@ class DetailScreen extends StatelessWidget {
             ),
             Container(
               padding: const EdgeInsets.all(16.0),
-              child: const Text(
-                'Museum inside a decommissioned Russian war submarine '
-                    'with tours & an adjacent park with cafes. Clean '
-                    'and well maintained. Car park cost 10k, entrance '
-                    'free 15k/person. You can see KRI Pasopati there, '
-                    'it is a russian whiskey class. You can also watch '
-                    'the video about the Indonesian Navy at the building '
-                    'beside the submarine.',
+              child: Text(
+                place.description,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16.0,
